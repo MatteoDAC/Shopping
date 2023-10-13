@@ -33,7 +33,10 @@
             }
             set
             {
-                throw new NotImplementedException();
+                if (value.Length >= 50)
+                {
+                    throw new TooLongDescriptionException();
+                }
             }
         }
 
